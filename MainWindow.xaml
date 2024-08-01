@@ -1,0 +1,26 @@
+﻿<Window x:Class="PlaylistApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlaylistApp"
+        mc:Ignorable="d"
+        Title="PlaylistApp" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="TrackNameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="420,10,0,0" VerticalAlignment="Top" Width="30" Click="AddTrack_Click"/>
+
+        <Label x:Name="CurrentTrackLabel" Content="Track 1" HorizontalAlignment="Left" Margin="250,100,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Prev" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="75" Click="PrevTrack_Click"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="325,150,0,0" VerticalAlignment="Top" Width="75" Click="NextTrack_Click"/>
+        <Button Content="Delete Current" HorizontalAlignment="Left" Margin="225,200,0,0" VerticalAlignment="Top" Width="100" Click="DeleteCurrentTrack_Click"/>
+
+        <ListBox x:Name="TracksListBox" HorizontalAlignment="Left" Height="300" Margin="500,10,0,0" VerticalAlignment="Top" Width="250">
+            <!--<ListBoxItem Content="Track1"/>
+            <ListBoxItem Content="Track2"/>
+            <ListBoxItem Content="Track3"/>
+            <ListBoxItem Content="Track4"/>-->
+        </ListBox>
+    </Grid>
+</Window>
