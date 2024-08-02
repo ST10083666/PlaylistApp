@@ -2,7 +2,7 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
+# Define jobs to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   say-hello:
@@ -20,8 +20,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"'
-sonarqube:
+          command: "echo Hello, World!"
+
+  sonarqube:
     working_directory: ~/build
     docker:
       - image: sonarsource/sonar-scanner-cli
