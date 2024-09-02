@@ -13,11 +13,12 @@ namespace PlaylistApp
             InitializeComponent();
             playlist = new DoubleLinkedList();
 
-          
+            // Add default tracks
             playlist.AddTrack("Track 1");
             playlist.AddTrack("Track 2");
             playlist.AddTrack("Track 3");
             playlist.AddTrack("Track 4");
+            playlist.AddTrack("Test Track");
 
             UpdateTrackList();
         }
@@ -35,7 +36,7 @@ namespace PlaylistApp
 
         private void PrevTrack_Click(object sender, RoutedEventArgs e)
         {
-            if (currentTrack != null && currentTrack.Previous != null)
+            if (currentTrack != null)
             {
                 currentTrack = currentTrack.Previous;
                 CurrentTrackLabel.Content = currentTrack.TrackName;
@@ -44,7 +45,7 @@ namespace PlaylistApp
 
         private void NextTrack_Click(object sender, RoutedEventArgs e)
         {
-            if (currentTrack != null && currentTrack.Next != null)
+            if (currentTrack != null)
             {
                 currentTrack = currentTrack.Next;
                 CurrentTrackLabel.Content = currentTrack.TrackName;
@@ -56,7 +57,7 @@ namespace PlaylistApp
             if (currentTrack != null)
             {
                 string trackName = currentTrack.TrackName;
-                Node nextTrack = currentTrack.Next ?? currentTrack.Previous;
+                Node nextTrack = currentTrack.Next == currentTrack ? null : currentTrack.Next;
                 playlist.RemoveTrack(trackName);
                 currentTrack = nextTrack;
                 CurrentTrackLabel.Content = currentTrack?.TrackName ?? string.Empty;

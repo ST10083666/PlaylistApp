@@ -16,11 +16,6 @@
         <Button Content="Next" HorizontalAlignment="Left" Margin="325,150,0,0" VerticalAlignment="Top" Width="75" Click="NextTrack_Click"/>
         <Button Content="Delete Current" HorizontalAlignment="Left" Margin="225,200,0,0" VerticalAlignment="Top" Width="100" Click="DeleteCurrentTrack_Click"/>
 
-        <ListBox x:Name="TracksListBox" HorizontalAlignment="Left" Height="300" Margin="500,10,0,0" VerticalAlignment="Top" Width="250">
-            <!--<ListBoxItem Content="Track1"/>
-            <ListBoxItem Content="Track2"/>
-            <ListBoxItem Content="Track3"/>
-            <ListBoxItem Content="Track4"/>-->
-        </ListBox>
+        <ListBox x:Name="TracksListBox" HorizontalAlignment="Left" Height="300" Margin="500,10,0,0" VerticalAlignment="Top" Width="250"/>
     </Grid>
 </Window>
